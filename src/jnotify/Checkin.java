@@ -47,7 +47,16 @@ public class Checkin {
 	public double getElapse(){
 		String nowStr = new SimpleDateFormat("yyyyMMdd").format(new Date());
 		String cCheckOut = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+		
+		System.out.print("nowStr=");
 		System.out.println(nowStr);
+		
+		System.out.print("cCheckOut=");
+		System.out.println(cCheckOut);
+		
+		System.out.print("this.date=");
+		System.out.println(date);		
+		
 		if(!nowStr.equals(this.date)){
 			cCheckOut = checkout ;
 		}

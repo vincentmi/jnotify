@@ -27,6 +27,8 @@ public class JNotify {
 	public static MenuItem itemElapse;
 	public static String dataPath;
 	
+	public static String VERSION = "1.0.1";
+	
 	public static Checkin today ;
 	public static CheckinGroup month ;
 	public static TimeUpdate tu ;
@@ -78,7 +80,7 @@ public class JNotify {
 			
 			itemElapse = new MenuItem("Elapse     "+today.getCheckinTime());
 			
-			popup.add("CheckinMgr 1.0");
+			popup.add("CheckinMgr " + JNotify.VERSION );
 			popup.addSeparator();
 			popup.add("Sign in at   "+today.getCheckinTime());
 			popup.add(itemElapse);

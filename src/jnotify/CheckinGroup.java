@@ -92,6 +92,7 @@ public class CheckinGroup extends HashMap {
 		Checkin t = (Checkin) this.get(key);
 		if(t == null){
 			t = new Checkin();
+			t.date = key;
 			this.put(key, t);
 		}
 		if(t.checkin == null){
