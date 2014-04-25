@@ -27,7 +27,7 @@ public class JNotify {
 	public static MenuItem itemElapse;
 	public static String dataPath;
 	
-	public static String VERSION = "1.0.1";
+	public static String VERSION = "1.0.3";
 	
 	public static Checkin today ;
 	public static CheckinGroup month ;

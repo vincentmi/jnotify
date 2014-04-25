@@ -25,8 +25,19 @@ public class CheckinGroup extends HashMap {
 	public boolean store(String file){
 		Iterator it = this.keySet().iterator();
 		StringBuffer sb = new StringBuffer();
+		
+		String[]  datelist = new String[this.size()];
+		int index = 0 ;
 		while(it.hasNext()){
-			Checkin ci = (Checkin)this.get(it.next());
+			datelist[index] = (String) it.next();
+			index++ ;
+		}
+		
+		java.util.Arrays.sort(datelist);
+		
+		
+		for(int i = 0 ; i < index;i++){
+			Checkin ci = (Checkin)this.get(datelist[i]);
 			sb.append(ci.checkin);
 			sb.append(";");
 			sb.append(ci.checkout);
@@ -163,8 +174,19 @@ public class CheckinGroup extends HashMap {
 		SimpleDateFormat f1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		int total = 0 ;
 		double totalMin = 0;
+		
+		String[]  datelist = new String[this.size()];
+		int index = 0 ;
 		while(it.hasNext()){
-			Checkin ci = (Checkin)this.get(it.next());
+			datelist[index] = (String) it.next();
+			index++ ;
+		}
+		
+		java.util.Arrays.sort(datelist);
+		
+		
+		for(int i = 0 ; i < index;i++){
+			Checkin ci = (Checkin)this.get(datelist[i]);
 			sb.append(ci.date);
 			sb.append("     ");
 			try {
